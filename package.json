@@ -1,0 +1,25 @@
+{
+  "name": "ts-inversify-lib",
+  "version": "1.0.0",
+  "description": "An example to demonstrate the use of typescript and inversify as a library",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/pavanpalakshamurthy/ts-inversify-lib.git"
+  },
+  "keywords": [
+    "typescript",
+    "inversify",
+    "library",
+    "example"
+  ],
+  "author": "pavan palakshamurthy",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pavanpalakshamurthy/ts-inversify-lib/issues"
+  },
+  "homepage": "https://github.com/pavanpalakshamurthy/ts-inversify-lib#readme"
+}
