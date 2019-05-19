@@ -3,6 +3,7 @@
     "version": "1.0.0",
     "description": "An example to demonstrate the use of typescript and inversify as a library",
     "main": "index.js",
+    "types": "dts/src/index.d.ts",
     "scripts": {
         "test": "npm test",
         "build": "webpack",
