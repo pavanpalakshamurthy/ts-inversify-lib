@@ -1,4 +1,8 @@
 import "reflect-metadata";
 import { Container } from "inversify";
-declare let container: Container;
-export default container;
+export default class BootStrap {
+    private libContainer;
+    constructor();
+    private init;
+    getContainer(): Container;
+}

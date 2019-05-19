@@ -6,9 +6,22 @@ import SqlDataRepository from './src/repository/implementation/SqlDataRepository
 import IService from './src/service/interface/IService';
 import Service from './src/service/implementation/Service';
 
-let container = new Container({ defaultScope: "Singleton" });
+export default class BootStrap {
+    private libContainer: Container;
 
-container.bind<IDataRepository>("IDataRepository").to(MongoDataRepository).inSingletonScope();
-container.bind<IService>("IService").to(Service).inSingletonScope()
+    constructor() {
+       this.init();
+    }
 
-export default container;
+    private init(): Container {
+        this.libContainer = new Container({ defaultScope: "Singleton" });
+        this.libContainer.bind<IDataRepository>("IDataRepository").to(MongoDataRepository).inSingletonScope();
+        this.libContainer.bind<IService>("IService").to(Service).inSingletonScope();
+        return this.libContainer;
+    }
+
+    getContainer() {
+        return this.libContainer ? this.libContainer: this.init();
+    }
+}
+

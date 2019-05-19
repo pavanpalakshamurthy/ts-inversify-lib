@@ -1,3 +1,6 @@
-import container from '../inversify.config';
+import BootStrap from "../inversify.config";
+import IService from './service/interface/IService';
+import Service from './service/implementation/Service';
 
-export = container;
+
+export {BootStrap, IService, Service};

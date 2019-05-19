@@ -94,7 +94,7 @@
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-eval("\nObject.defineProperty(exports, \"__esModule\", { value: true });\n__webpack_require__(/*! reflect-metadata */ \"./node_modules/reflect-metadata/Reflect.js\");\nvar inversify_1 = __webpack_require__(/*! inversify */ \"./node_modules/inversify/lib/inversify.js\");\nvar MongoDataRepository_1 = __webpack_require__(/*! ./src/repository/implementation/MongoDataRepository */ \"./src/repository/implementation/MongoDataRepository.ts\");\nvar Service_1 = __webpack_require__(/*! ./src/service/implementation/Service */ \"./src/service/implementation/Service.ts\");\nvar container = new inversify_1.Container({ defaultScope: \"Singleton\" });\ncontainer.bind(\"IDataRepository\").to(MongoDataRepository_1.default).inSingletonScope();\ncontainer.bind(\"IService\").to(Service_1.default).inSingletonScope();\nexports.default = container;\n\n\n//# sourceURL=webpack:///./inversify.config.ts?");
+eval("\nObject.defineProperty(exports, \"__esModule\", { value: true });\n__webpack_require__(/*! reflect-metadata */ \"./node_modules/reflect-metadata/Reflect.js\");\nvar inversify_1 = __webpack_require__(/*! inversify */ \"./node_modules/inversify/lib/inversify.js\");\nvar MongoDataRepository_1 = __webpack_require__(/*! ./src/repository/implementation/MongoDataRepository */ \"./src/repository/implementation/MongoDataRepository.ts\");\nvar Service_1 = __webpack_require__(/*! ./src/service/implementation/Service */ \"./src/service/implementation/Service.ts\");\nvar BootStrap = /** @class */ (function () {\n    function BootStrap() {\n        this.init();\n    }\n    BootStrap.prototype.init = function () {\n        this.libContainer = new inversify_1.Container({ defaultScope: \"Singleton\" });\n        this.libContainer.bind(\"IDataRepository\").to(MongoDataRepository_1.default).inSingletonScope();\n        this.libContainer.bind(\"IService\").to(Service_1.default).inSingletonScope();\n        return this.libContainer;\n    };\n    BootStrap.prototype.getContainer = function () {\n        return this.libContainer ? this.libContainer : this.init();\n    };\n    return BootStrap;\n}());\nexports.default = BootStrap;\n\n\n//# sourceURL=webpack:///./inversify.config.ts?");
 
 /***/ }),
 
@@ -643,7 +643,7 @@ eval("var g;\n\n// This works in non-strict mode\ng = (function() {\n\treturn th
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-eval("\nvar inversify_config_1 = __webpack_require__(/*! ../inversify.config */ \"./inversify.config.ts\");\nmodule.exports = inversify_config_1.default;\n\n\n//# sourceURL=webpack:///./src/index.ts?");
+eval("\nObject.defineProperty(exports, \"__esModule\", { value: true });\nvar inversify_config_1 = __webpack_require__(/*! ../inversify.config */ \"./inversify.config.ts\");\nexports.BootStrap = inversify_config_1.default;\nvar Service_1 = __webpack_require__(/*! ./service/implementation/Service */ \"./src/service/implementation/Service.ts\");\nexports.Service = Service_1.default;\n\n\n//# sourceURL=webpack:///./src/index.ts?");
 
 /***/ }),
 
