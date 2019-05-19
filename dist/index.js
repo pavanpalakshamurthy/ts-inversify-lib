@@ -643,7 +643,19 @@ eval("var g;\n\n// This works in non-strict mode\ng = (function() {\n\treturn th
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-eval("\nObject.defineProperty(exports, \"__esModule\", { value: true });\nvar inversify_config_1 = __webpack_require__(/*! ../inversify.config */ \"./inversify.config.ts\");\nexports.BootStrap = inversify_config_1.default;\nvar Service_1 = __webpack_require__(/*! ./service/implementation/Service */ \"./src/service/implementation/Service.ts\");\nexports.Service = Service_1.default;\n\n\n//# sourceURL=webpack:///./src/index.ts?");
+eval("\nObject.defineProperty(exports, \"__esModule\", { value: true });\nvar inversify_config_1 = __webpack_require__(/*! ../inversify.config */ \"./inversify.config.ts\");\nexports.BootStrap = inversify_config_1.default;\nvar Service_1 = __webpack_require__(/*! ./service/implementation/Service */ \"./src/service/implementation/Service.ts\");\nexports.Service = Service_1.default;\nvar Request_1 = __webpack_require__(/*! ./models/Request */ \"./src/models/Request.ts\");\nexports.Request = Request_1.default;\nvar Response_1 = __webpack_require__(/*! ./models/Response */ \"./src/models/Response.ts\");\nexports.Response = Response_1.default;\n\n\n//# sourceURL=webpack:///./src/index.ts?");
+
+/***/ }),
+
+/***/ "./src/models/Request.ts":
+/*!*******************************!*\
+  !*** ./src/models/Request.ts ***!
+  \*******************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+eval("\nObject.defineProperty(exports, \"__esModule\", { value: true });\nvar Request = /** @class */ (function () {\n    function Request() {\n    }\n    Object.defineProperty(Request.prototype, \"id\", {\n        /**\n         * Getter id\n         * @return {number}\n         */\n        get: function () {\n            return this._id;\n        },\n        /**\n         * Setter id\n         * @param {number} value\n         */\n        set: function (value) {\n            this._id = value;\n        },\n        enumerable: true,\n        configurable: true\n    });\n    Object.defineProperty(Request.prototype, \"date\", {\n        /**\n         * Getter date\n         * @return {Date}\n         */\n        get: function () {\n            return this._date;\n        },\n        /**\n         * Setter date\n         * @param {Date} value\n         */\n        set: function (value) {\n            this._date = value;\n        },\n        enumerable: true,\n        configurable: true\n    });\n    return Request;\n}());\nexports.default = Request;\n\n\n//# sourceURL=webpack:///./src/models/Request.ts?");
 
 /***/ }),
 
