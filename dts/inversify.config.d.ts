@@ -1,6 +1,6 @@
 import "reflect-metadata";
 import { Container } from "inversify";
-export default class BootStrap {
+export declare class BootStrap {
     private libContainer;
     constructor();
     private init;

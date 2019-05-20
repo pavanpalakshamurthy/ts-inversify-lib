@@ -6,7 +6,7 @@ import SqlDataRepository from './src/repository/implementation/SqlDataRepository
 import IService from './src/service/interface/IService';
 import Service from './src/service/implementation/Service';
 
-export default class BootStrap {
+export class BootStrap {
     private libContainer: Container;
 
     constructor() {
