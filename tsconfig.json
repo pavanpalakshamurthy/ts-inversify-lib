@@ -1,7 +1,7 @@
 {
     "compilerOptions": {
         "target": "es5",
-        "lib": ["es6"],
+        "lib": ["es6", "dom"],
         "typeRoots": ["node_modules/@types"],
         "types": ["reflect-metadata"],
         "module": "commonjs",

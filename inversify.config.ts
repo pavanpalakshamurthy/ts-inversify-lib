@@ -24,4 +24,5 @@ export default class BootStrap {
         return this.libContainer ? this.libContainer: this.init();
     }
 }
+console.log("bootstrap was invoked !!!");
 
